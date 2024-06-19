@@ -1,0 +1,29 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: Waves-2.png (1144 x 1008)
+# $TexturePacker:SmartUpdate:ded78af2e7822402400d047d9f4e5176:053422cc487c35605a10e1e1ce18a16c:8873d83cb29f19eb87498fce13491531$
+#
+
+wave-one-circle_00001;1106;856;36;24;0.5;0.5
+wave-one-circle_00002;1080;730;62;40;0.5;0.5
+wave-one-circle_00003;1034;476;90;58;0.5;0.5
+wave-one-circle_00004;916;460;116;74;0.5;0.5
+wave-one-circle_00005;938;680;140;90;0.5;0.5
+wave-one-circle_00006;938;772;166;108;0.5;0.5
+wave-one-circle_00007;938;882;194;124;0.5;0.5
+wave-one-circle_00008;916;536;220;142;0.5;0.5
+wave-one-circle_00009;274;26;246;158;0.5;0.5
+wave-one-circle_00010;2;10;270;174;0.5;0.5
+wave-one-circle_00011;522;6;296;190;0.5;0.5
+wave-one-circle_00012;820;4;320;206;0.5;0.5
+wave-one-circle_00013;758;212;342;220;0.5;0.5
+wave-one-circle_00014;390;198;366;234;0.5;0.5
+wave-one-circle_00015;2;186;386;248;0.5;0.5
+wave-one-circle_00016;2;436;408;262;0.5;0.5
+wave-one-circle_00017;482;434;432;278;0.5;0.5
+wave-one-circle_00018;482;714;454;292;0.5;0.5
+wave-one-circle_00019;2;700;478;306;0.5;0.5
