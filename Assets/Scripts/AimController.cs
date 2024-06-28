@@ -26,7 +26,6 @@ public class AimController : MonoBehaviour
 
     void MoveAim()
     {
-        Debug.Log(DotsTransform.localEulerAngles.z);
         // Calculate the difference in the mouse's X position from the last frame
         float mouseXDelta = Input.mousePosition.x - lastMouseX;
 
