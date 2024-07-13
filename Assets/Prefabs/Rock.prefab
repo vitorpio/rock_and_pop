@@ -903,8 +903,9 @@ GameObject:
   - component: {fileID: 1446491895558418644}
   - component: {fileID: 5242900158153944167}
   - component: {fileID: 5801331450963667242}
+  - component: {fileID: 231525634126023084}
   m_Layer: 4
-  m_Name: Rock
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,6 +995,33 @@ MonoBehaviour:
   - {fileID: 2800000, guid: c7eca1a525195d1078adfa263591bac9, type: 3}
   - {fileID: 2800000, guid: 49d4e401ec11cbdbc9f9bd1a5fb6e756, type: 3}
   - {fileID: 2800000, guid: 29dc1fc2efb08278f8db52df020fe53b, type: 3}
+--- !u!50 &231525634126023084
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354748019227975450}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3682988368882402549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,9 +1390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f82d99723ee59fc9da52d5f013c906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sensitivity: 100
   DotsTransform: {fileID: 3544304602629976453}
   PivotTransform: {fileID: 1438146578122918679}
-  Sensitivity: 100
 --- !u!1 &8498148505516047839
 GameObject:
   m_ObjectHideFlags: 0
