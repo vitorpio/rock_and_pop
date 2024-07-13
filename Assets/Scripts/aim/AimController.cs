@@ -7,21 +7,28 @@ public class AimController : MonoBehaviour
 {
     public Transform DotsTransform;
     public Transform PivotTransform;
+    private GameController gameController;
 
     public int Sensitivity = 100;
 
     private float lastMouseX;
 
-    // Start is called before the first frame update
     void Start()
     {
         lastMouseX = Input.mousePosition.x;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        MoveAim();
+        if (gameController.CurrentGameState == GameState.Aiming)
+        {
+            MoveAim();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void MoveAim()
