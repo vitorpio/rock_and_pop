@@ -902,6 +902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446491895558418644}
   - component: {fileID: 5242900158153944167}
+  - component: {fileID: 5801331450963667242}
   m_Layer: 4
   m_Name: Rock
   m_TagString: Untagged
@@ -965,17 +966,34 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.58, y: 1.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5801331450963667242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354748019227975450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04237333f3c2c8708ca8d62392976ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RockTextures:
+  - {fileID: 2800000, guid: 48621611da8a1d6ddbabcc604b597524, type: 3}
+  - {fileID: 2800000, guid: c7eca1a525195d1078adfa263591bac9, type: 3}
+  - {fileID: 2800000, guid: 49d4e401ec11cbdbc9f9bd1a5fb6e756, type: 3}
+  - {fileID: 2800000, guid: 29dc1fc2efb08278f8db52df020fe53b, type: 3}
 --- !u!1 &3682988368882402549
 GameObject:
   m_ObjectHideFlags: 0
