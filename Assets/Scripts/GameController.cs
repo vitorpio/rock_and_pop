@@ -15,9 +15,10 @@ public class GameController : MonoBehaviour
 {
 
     public GameState CurrentGameState { get; set; }
+    private GameObject remainingRocksNumber;
     private int _startingRocks = 3;
     private int _remainingRocks;
-    private GameObject remainingRocksNumber;
+
     public int RemainingRocks
     {
         get { return RemainingRocks; }

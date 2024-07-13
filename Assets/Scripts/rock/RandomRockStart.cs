@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class RandomRockStart : MonoBehaviour
 {
-    public List<Texture2D> RockTextures;
-
     private SpriteRenderer spriteRenderer;
-    PolygonCollider2D polygonCollider;
+    private PolygonCollider2D polygonCollider;
+
+    public List<Texture2D> RockTextures;
 
     void Awake()
     {

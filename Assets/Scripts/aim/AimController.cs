@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
-    public Transform DotsTransform;
-    public Transform PivotTransform;
     private GameController gameController;
+    private float lastMouseX;
 
     public int Sensitivity = 100;
-
-    private float lastMouseX;
+    public Transform DotsTransform;
+    public Transform PivotTransform;
 
     void Awake()
     {
