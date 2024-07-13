@@ -13,16 +13,21 @@ public class AimController : MonoBehaviour
 
     private float lastMouseX;
 
+    void Awake()
+    {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+
     void Start()
     {
         lastMouseX = Input.mousePosition.x;
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     void Update()
     {
         if (gameController.CurrentGameState == GameState.Aiming)
         {
+            gameObject.SetActive(true);
             MoveAim();
         }
         else

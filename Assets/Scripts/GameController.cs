@@ -15,15 +15,24 @@ public class GameController : MonoBehaviour
 {
 
     public GameState CurrentGameState { get; set; }
-
-    void Start()
+    private int _startingRocks = 3;
+    private int _remainingRocks;
+    private GameObject remainingRocksNumber;
+    public int RemainingRocks
     {
+        get { return RemainingRocks; }
+        set
+        {
+            _remainingRocks = value;
+            remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = _remainingRocks.ToString();
+        }
+    }
+
+    void Awake()
+    {
+        remainingRocksNumber = GameObject.Find("RemainingRocksNumber");
         CurrentGameState = GameState.Aiming;
+        RemainingRocks = _startingRocks;
     }
 
-
-    void Update()
-    {
-
-    }
 }
