@@ -8,7 +8,7 @@ public class AimController : MonoBehaviour
     private GameController gameController;
     private float lastMouseX;
 
-    public int Sensitivity = 100;
+    private int Sensitivity = 100;
     public Transform DotsTransform;
     public Transform PivotTransform;
 
