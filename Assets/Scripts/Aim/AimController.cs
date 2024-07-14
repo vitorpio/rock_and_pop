@@ -11,6 +11,7 @@ public class AimController : MonoBehaviour
     private int Sensitivity = 100;
     public Transform DotsTransform;
     public Transform PivotTransform;
+    public float Angle = 0;
 
     void Awake()
     {
@@ -51,10 +52,10 @@ public class AimController : MonoBehaviour
             DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, -mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
 
             // Convert localEulerAngles.z to a range of -180 to 180 for easier comparison
-            float zAngle = DotsTransform.localEulerAngles.z > 180 ? DotsTransform.localEulerAngles.z - 360 : DotsTransform.localEulerAngles.z;
+            Angle = DotsTransform.localEulerAngles.z > 180 ? DotsTransform.localEulerAngles.z - 360 : DotsTransform.localEulerAngles.z;
 
             // Check if the rotation is outside the allowed range
-            if (zAngle > 90 || zAngle < -90)
+            if (Angle > 90 || Angle < -90)
             {
                 DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
             }
