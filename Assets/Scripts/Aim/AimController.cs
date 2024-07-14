@@ -14,7 +14,7 @@ public class AimController : MonoBehaviour
 
     void Awake()
     {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     void Start()
@@ -29,7 +29,7 @@ public class AimController : MonoBehaviour
             gameObject.SetActive(true);
             MoveAim();
         }
-        else
+        else if (gameController.CurrentGameState != GameState.Shooting)
         {
             gameObject.SetActive(false);
         }
@@ -60,6 +60,5 @@ public class AimController : MonoBehaviour
             }
 
         }
-
     }
 }
