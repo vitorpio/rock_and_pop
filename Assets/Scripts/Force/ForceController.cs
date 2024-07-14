@@ -5,18 +5,22 @@ using UnityEngine;
 public class ForceController : MonoBehaviour
 {
     public int forceMultiplier = 0;
-    private float forceUpdateDelay = 0.01f;
+    private float forceUpdateDelay = 0.1f;
     private float minForceMultiplier = 0;
-    private float maxForceMultiplier = 100;
+    private float maxForceMultiplier = 10;
 
     private GameController gameController;
     private Coroutine updateForceMultiplierCoroutine;
+    private RockMovementController rockMovementController;
+    private AimController aimController;
 
     private bool isIncreasing = true;
 
     void Awake()
     {
         gameController = FindObjectOfType<GameController>();
+        rockMovementController = FindObjectOfType<RockMovementController>();
+        aimController = FindObjectOfType<AimController>();
     }
 
 
@@ -48,6 +52,7 @@ public class ForceController : MonoBehaviour
             gameController.CurrentGameState = GameState.WaitingForNextTurn;
             StopCoroutine(updateForceMultiplierCoroutine);
             updateForceMultiplierCoroutine = null;
+            rockMovementController.ApplyForce(aimController.Angle, forceMultiplier);
         }
     }
 
