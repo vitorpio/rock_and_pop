@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ForceController : MonoBehaviour
 {
-    public int forceMultiplier = 0;
+    public int forceMultiplier = 1;
     private float forceUpdateDelay = 0.1f;
-    private float minForceMultiplier = 0;
+    private float minForceMultiplier = 1;
     private float maxForceMultiplier = 10;
 
     private GameController gameController;

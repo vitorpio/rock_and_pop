@@ -904,9 +904,11 @@ GameObject:
   - component: {fileID: 5242900158153944167}
   - component: {fileID: 5801331450963667242}
   - component: {fileID: 231525634126023084}
-  m_Layer: 4
-  m_Name: Sprite
-  m_TagString: Untagged
+  - component: {fileID: 1555962594945589034}
+  - component: {fileID: 4209279438561150239}
+  m_Layer: 0
+  m_Name: RockSprite
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,7 +1011,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1022,6 +1024,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1555962594945589034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354748019227975450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f950ea82377364b2a3b2bf1c72e7ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4209279438561150239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354748019227975450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99b8be8082a3780d9c0a517954b738a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3682988368882402549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,9 +1416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f82d99723ee59fc9da52d5f013c906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: 100
   DotsTransform: {fileID: 3544304602629976453}
   PivotTransform: {fileID: 1438146578122918679}
+  Angle: 0
 --- !u!1 &8498148505516047839
 GameObject:
   m_ObjectHideFlags: 0
