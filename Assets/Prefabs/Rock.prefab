@@ -906,6 +906,7 @@ GameObject:
   - component: {fileID: 231525634126023084}
   - component: {fileID: 1555962594945589034}
   - component: {fileID: 4209279438561150239}
+  - component: {fileID: 2037819704191699720}
   m_Layer: 0
   m_Name: RockSprite
   m_TagString: Player
@@ -1046,6 +1047,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d99b8be8082a3780d9c0a517954b738a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2037819704191699720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354748019227975450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce2fd93746c4b1c58f4f2efcb578254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3682988368882402549
