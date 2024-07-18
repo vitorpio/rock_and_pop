@@ -6,20 +6,29 @@ public class RockUpAndDown : MonoBehaviour
 {
     private GameController gameController;
     private ForceController forceController;
+    private AimController aimController;
+    private RockMovementController rockMovementController;
+    private Rigidbody2D rigidbody;
 
     private float rockScale = 0.5f;
     private float maxRockScale = 0.5f;
-    private float minRockScale = 0.45f;
-    private float rockResizeScale = 0.01f;
-    private float rockDelayScale = 0.01f;
+    private float minRockScale = 0.3f;
+    private float rockResizeScale = 0.02f;
+    private float rockDelayScale = 0.02f;
+    private float dragForceHitWater = 0.25f;
     private bool isIncreasing = false;
 
     private Coroutine updateRockScaleCoroutine;
+
+    public GameObject WavePrefab;
 
     void Awake()
     {
         gameController = FindObjectOfType<GameController>();
         forceController = FindObjectOfType<ForceController>();
+        aimController = FindObjectOfType<AimController>();
+        rockMovementController = GetComponent<RockMovementController>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
 
@@ -53,10 +62,11 @@ public class RockUpAndDown : MonoBehaviour
                 else
                 {
                     isIncreasing = !isIncreasing;
-                    // Hit the water
+                    Instantiate(WavePrefab, transform.position, Quaternion.identity);
+                    rockMovementController.ApplyForce(aimController.Angle, forceController.forceMultiplier * dragForceHitWater * -1);
                 }
                 transform.localScale = new Vector3(rockScale, rockScale, rockScale);
-                yield return new WaitForSeconds(rockDelayScale * (forceController.maxForceMultiplier / forceController.forceMultiplier));
+                yield return new WaitForSeconds(rockDelayScale * (forceController.maxForceMultiplier / rigidbody.velocity.magnitude));
             }
         }
     }

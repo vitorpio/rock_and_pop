@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RockMovementController : MonoBehaviour
 {
-    Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody;
+
+    private float minVelocityNotToSink = 2.0f;
 
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    public void ApplyForce(float angle, int forceMultipliyer)
+    public void ApplyForce(float angle, float forceMultipliyer)
     {
         // Change angle signal unity to math
         angle = -angle;
@@ -26,6 +28,12 @@ public class RockMovementController : MonoBehaviour
 
         // Apply the force in the calculated direction
         rigidbody.AddForce(forceVector, ForceMode2D.Impulse);
+
+        // If the force is negative, the rock will sink if the velocity is less than minVelocityNotToSink
+        if (rigidbody.velocity.magnitude < minVelocityNotToSink && forceMultipliyer < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

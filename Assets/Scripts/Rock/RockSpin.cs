@@ -8,6 +8,7 @@ public class RockSpin : MonoBehaviour
     private GameController gameController;
     private ForceController forceController;
     private AimController aimController;
+    private Rigidbody2D rigidbody;
     private float spinSpeed = 1;
 
     void Awake()
@@ -15,13 +16,14 @@ public class RockSpin : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         forceController = FindObjectOfType<ForceController>();
         aimController = FindObjectOfType<AimController>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
         if (gameController.CurrentGameState == GameState.WaitingForNextTurn)
         {
-            transform.Rotate(0, 0, (aimController.Angle >= 0 ? 1 : -1) * forceController.forceMultiplier);
+            transform.Rotate(0, 0, (aimController.Angle >= 0 ? spinSpeed : (spinSpeed * -1)) * rigidbody.velocity.magnitude);
         }
     }
 }
