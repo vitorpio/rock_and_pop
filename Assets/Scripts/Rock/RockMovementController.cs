@@ -5,11 +5,13 @@ using UnityEngine;
 public class RockMovementController : MonoBehaviour
 {
     private Rigidbody2D rigidbody;
+    private GameController gameController;
 
     private float minVelocityNotToSink = 2.0f;
 
     void Awake()
     {
+        gameController = FindObjectOfType<GameController>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -32,7 +34,7 @@ public class RockMovementController : MonoBehaviour
         // If the force is negative, the rock will sink if the velocity is less than minVelocityNotToSink
         if (rigidbody.velocity.magnitude < minVelocityNotToSink && forceMultipliyer < 0)
         {
-            Destroy(gameObject);
+            gameController.ResetRock();
         }
     }
 

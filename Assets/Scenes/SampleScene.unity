@@ -327,6 +327,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e9137d4823911658d47e743798046f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentGameState: 0
+  rockPrefab: {fileID: 8375244625745586342, guid: e117b92827dce854ca9e59479cfb5c2a, type: 3}
+  rockSpawnPoint: {fileID: 1439559596}
+--- !u!4 &1439559596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1438146578122918679, guid: 535044bd6e9b2360da3a8f51644e13ce, type: 3}
+  m_PrefabInstance: {fileID: 2295059949812454838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2295059949812454838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,7 +345,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2760559626101757378, guid: 535044bd6e9b2360da3a8f51644e13ce, type: 3}
       propertyPath: m_Name
-      value: Rock
+      value: RockUI
       objectReference: {fileID: 0}
     - target: {fileID: 4979152313274752021, guid: 535044bd6e9b2360da3a8f51644e13ce, type: 3}
       propertyPath: m_LocalPosition.x

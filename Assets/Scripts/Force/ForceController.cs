@@ -9,9 +9,10 @@ public class ForceController : MonoBehaviour
     public float minForceMultiplier = 1;
     public float maxForceMultiplier = 10;
 
+    public RockMovementController rockMovementController;
+
     private GameController gameController;
     private Coroutine updateForceMultiplierCoroutine;
-    private RockMovementController rockMovementController;
     private AimController aimController;
 
     private bool isIncreasing = true;
@@ -19,7 +20,6 @@ public class ForceController : MonoBehaviour
     void Awake()
     {
         gameController = FindObjectOfType<GameController>();
-        rockMovementController = FindObjectOfType<RockMovementController>();
         aimController = FindObjectOfType<AimController>();
     }
 

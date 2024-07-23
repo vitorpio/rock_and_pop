@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class RockSpin : MonoBehaviour
 {
     private GameController gameController;
-    private ForceController forceController;
     private AimController aimController;
     private Rigidbody2D rigidbody;
     private float spinSpeed = 1;
@@ -14,7 +13,6 @@ public class RockSpin : MonoBehaviour
     void Awake()
     {
         gameController = FindObjectOfType<GameController>();
-        forceController = FindObjectOfType<ForceController>();
         aimController = FindObjectOfType<AimController>();
         rigidbody = GetComponent<Rigidbody2D>();
     }

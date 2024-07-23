@@ -14,10 +14,15 @@ public enum GameState
 public class GameController : MonoBehaviour
 {
 
-    public GameState CurrentGameState { get; set; }
+    public GameState CurrentGameState;
+    public GameObject rockPrefab;
+    public Transform rockSpawnPoint;
+
     private GameObject remainingRocksNumber;
     private int _startingRocks = 3;
     private int _remainingRocks;
+    private ForceController forceController;
+    private GameObject rockInstance;
 
     public int RemainingRocks
     {
@@ -31,9 +36,21 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        forceController = FindObjectOfType<ForceController>();
         remainingRocksNumber = GameObject.Find("RemainingRocksNumber");
         CurrentGameState = GameState.Aiming;
         RemainingRocks = _startingRocks;
+        rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
+        forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+    }
+
+    public void ResetRock()
+    {
+        Destroy(rockInstance);
+        rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
+        forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+        CurrentGameState = GameState.Aiming;
+        RemainingRocks = _remainingRocks - 1;
     }
 
 }

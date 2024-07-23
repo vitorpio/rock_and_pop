@@ -27,12 +27,12 @@ public class AimController : MonoBehaviour
     {
         if (gameController.CurrentGameState == GameState.Aiming)
         {
-            gameObject.SetActive(true);
+            setInvisible(false);
             MoveAim();
         }
         else if (gameController.CurrentGameState != GameState.Shooting)
         {
-            gameObject.SetActive(false);
+            setInvisible(true);
         }
     }
 
@@ -60,6 +60,15 @@ public class AimController : MonoBehaviour
                 DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
             }
 
+        }
+    }
+
+    private void setInvisible(bool isVisible)
+    {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.enabled = !isVisible;
         }
     }
 }
