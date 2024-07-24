@@ -46,11 +46,30 @@ public class GameController : MonoBehaviour
 
     public void ResetRock()
     {
-        Destroy(rockInstance);
-        rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
-        forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
-        CurrentGameState = GameState.Aiming;
-        RemainingRocks = _remainingRocks - 1;
+        if (rockInstance != null && rockSpawnPoint != null)
+        {
+            // Destroy the rock instance and create a new one
+            Destroy(rockInstance);
+            rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
+            forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+
+            // Update the game state and remaining rocks
+            CurrentGameState = GameState.Aiming;
+            RemainingRocks = _remainingRocks - 1;
+
+            // Reset the force multiplier
+            forceController.ResetForceMultiplier();
+        }
+    }
+
+    void OnDestroy()
+    {
+        // Ensure that the rock instance is destroyed when the scene is unloaded
+        if (rockInstance != null)
+        {
+            Destroy(rockInstance);
+            rockInstance = null;
+        }
     }
 
 }

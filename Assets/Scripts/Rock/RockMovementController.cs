@@ -34,7 +34,7 @@ public class RockMovementController : MonoBehaviour
         // If the force is negative, the rock will sink if the velocity is less than minVelocityNotToSink
         if (rigidbody.velocity.magnitude < minVelocityNotToSink && forceMultipliyer < 0)
         {
-            gameController.ResetRock();
+            gameObject.SetActive(false);
         }
     }
 

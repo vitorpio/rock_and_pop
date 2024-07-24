@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ForceController : MonoBehaviour
 {
-    public int forceMultiplier = 1;
+    public int minForceMultiplier = 1;
+    public int maxForceMultiplier = 10;
+    public int forceMultiplier;
+    public int startForceMultiplier = 0;
     private float forceUpdateDelay = 0.1f;
-    public float minForceMultiplier = 1;
-    public float maxForceMultiplier = 10;
 
     public RockMovementController rockMovementController;
 
@@ -21,6 +22,7 @@ public class ForceController : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>();
         aimController = FindObjectOfType<AimController>();
+        ResetForceMultiplier();
     }
 
 
@@ -81,6 +83,11 @@ public class ForceController : MonoBehaviour
             }
             yield return new WaitForSeconds(forceUpdateDelay);
         }
+    }
+
+    public void ResetForceMultiplier()
+    {
+        forceMultiplier = startForceMultiplier;
     }
 
 }
