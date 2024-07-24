@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -29,8 +30,16 @@ public class GameController : MonoBehaviour
         get { return RemainingRocks; }
         set
         {
-            _remainingRocks = value;
-            remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = _remainingRocks.ToString();
+            // If the remaining rocks is 0, reload the scene GAME-OVER
+            if (value == 0)
+            {
+                ReloadScene();
+            }
+            else
+            {
+                _remainingRocks = value;
+                remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = _remainingRocks.ToString();
+            }
         }
     }
 
@@ -53,13 +62,19 @@ public class GameController : MonoBehaviour
             rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
             forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
 
+            // Reset the force multiplier
+            forceController.ResetForceMultiplier();
+
             // Update the game state and remaining rocks
             CurrentGameState = GameState.Aiming;
             RemainingRocks = _remainingRocks - 1;
-
-            // Reset the force multiplier
-            forceController.ResetForceMultiplier();
         }
+    }
+
+    void ReloadScene()
+    {
+        // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void OnDestroy()
@@ -71,5 +86,6 @@ public class GameController : MonoBehaviour
             rockInstance = null;
         }
     }
+
 
 }
