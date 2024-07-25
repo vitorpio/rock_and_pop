@@ -7,6 +7,7 @@ public class AimController : MonoBehaviour
 {
     private GameController gameController;
     private float lastMouseX;
+    private float maxAngleShot = 35;
 
     private int Sensitivity = 100;
     public Transform DotsTransform;
@@ -55,7 +56,7 @@ public class AimController : MonoBehaviour
             Angle = DotsTransform.localEulerAngles.z > 180 ? DotsTransform.localEulerAngles.z - 360 : DotsTransform.localEulerAngles.z;
 
             // Check if the rotation is outside the allowed range
-            if (Angle > 90 || Angle < -90)
+            if (Angle > maxAngleShot || Angle < -maxAngleShot)
             {
                 DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
             }
