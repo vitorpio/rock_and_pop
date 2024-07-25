@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2275596284517024726, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 4218638074861201726, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
       propertyPath: m_Name
       value: UIBack
