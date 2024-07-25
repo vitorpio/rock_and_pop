@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ForceController : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class ForceController : MonoBehaviour
     private float forceUpdateDelay = 0.1f;
 
     public RockMovementController rockMovementController;
+    public List<Sprite> ForceBarSprites;
 
     private GameController gameController;
     private Coroutine updateForceMultiplierCoroutine;
     private AimController aimController;
+    private Image forceBar;
 
     private bool isIncreasing = true;
 
@@ -22,6 +25,7 @@ public class ForceController : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>();
         aimController = FindObjectOfType<AimController>();
+        forceBar = GetComponent<Image>();
         ResetForceMultiplier();
     }
 
@@ -52,8 +56,11 @@ public class ForceController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             gameController.CurrentGameState = GameState.WaitingForNextTurn;
-            StopCoroutine(updateForceMultiplierCoroutine);
-            updateForceMultiplierCoroutine = null;
+            if (updateForceMultiplierCoroutine != null)
+            {
+                StopCoroutine(updateForceMultiplierCoroutine);
+                updateForceMultiplierCoroutine = null;
+            }
             rockMovementController.ApplyForce(aimController.Angle, forceMultiplier);
         }
     }
@@ -81,6 +88,7 @@ public class ForceController : MonoBehaviour
             {
                 forceMultiplier--;
             }
+            forceBar.sprite = ForceBarSprites[forceMultiplier];
             yield return new WaitForSeconds(forceUpdateDelay);
         }
     }
@@ -88,6 +96,7 @@ public class ForceController : MonoBehaviour
     public void ResetForceMultiplier()
     {
         forceMultiplier = startForceMultiplier;
+        forceBar.sprite = ForceBarSprites[forceMultiplier];
     }
 
 }
