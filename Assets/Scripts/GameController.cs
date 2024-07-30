@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     public GameState CurrentGameState;
     public GameObject rockPrefab;
     public Transform rockSpawnPoint;
+    public int points = 0;
+    public int remainingBallons;
 
     private GameObject remainingRocksNumber;
     private int _startingRocks = 3;
@@ -51,6 +53,7 @@ public class GameController : MonoBehaviour
         RemainingRocks = _startingRocks;
         rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
         forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+        remainingBallons = GameObject.FindGameObjectsWithTag("Ballon").Length;
     }
 
     public void ResetRock()
@@ -75,6 +78,16 @@ public class GameController : MonoBehaviour
     {
         // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void AddPoints(int points)
+    {
+        this.points += points;
+        remainingBallons--;
+        if (remainingBallons == 0)
+        {
+            ReloadScene();
+        }
     }
 
     void OnDestroy()
