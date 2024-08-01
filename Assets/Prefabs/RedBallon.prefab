@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 149678617132868546}
   - component: {fileID: 1462113902456482812}
   - component: {fileID: 2127006022137165812}
+  - component: {fileID: 975638935855874442}
   m_Layer: 0
   m_Name: RedBallon
   m_TagString: Ballon
@@ -162,3 +163,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &975638935855874442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691530703149545425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4c3e5bf3ff1d1d39c7192df6701c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 1
+  currentWaypoint: 0
