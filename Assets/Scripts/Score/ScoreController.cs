@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
+    private readonly string prefix = "Pontuação: ";
+
     private Text scoreText;
-    private string prefix = "Pontuação: ";
 
     void Awake()
     {
