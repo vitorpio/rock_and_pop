@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -22,6 +20,7 @@ public class CameraController : MonoBehaviour
             float height = 2f * camera.orthographicSize;
             float width = height * camera.aspect;
 
+            // Create a box collider with the size of the camera
             boxCollider.size = new Vector2(width, height);
             boxCollider.isTrigger = true; // Set the collider as a trigger
         }
