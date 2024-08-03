@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RockMovementController : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
-    private GameController gameController;
+    private readonly float minVelocityNotToSink = 2.0f;
 
-    private float minVelocityNotToSink = 2.0f;
+    private new Rigidbody2D rigidbody;
 
     void Awake()
     {
-        gameController = FindObjectOfType<GameController>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
