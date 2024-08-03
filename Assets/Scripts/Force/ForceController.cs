@@ -24,7 +24,6 @@ public class ForceController : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>();
         aimController = FindObjectOfType<AimController>();
-        rockMovementController = FindObjectOfType<RockMovementController>();
         forceBar = GetComponent<Image>();
         ResetForceMultiplier();
     }

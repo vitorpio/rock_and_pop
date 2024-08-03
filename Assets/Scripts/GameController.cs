@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,19 +11,19 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-
-    public GameState CurrentGameState;
-    public GameObject rockPrefab;
-    public Transform rockSpawnPoint;
-    public int points = 0;
-    public int remainingBallons;
+    private readonly int startingRocks = 3;
 
     private GameObject remainingRocksNumber;
-    private int _startingRocks = 3;
-    private int _remainingRocks;
+    private Transform rockSpawnPoint;
     private ForceController forceController;
     private GameObject rockInstance;
     private ScoreController scoreController;
+    private int remainingRocks;
+
+    public GameState CurrentGameState = GameState.Aiming;
+    public GameObject rockPrefab;
+    public int points = 0;
+    public int remainingBallons;
 
     public int RemainingRocks
     {
@@ -40,28 +37,36 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                _remainingRocks = value;
-                remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = _remainingRocks.ToString();
+                remainingRocks = value;
+                remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = remainingRocks.ToString();
             }
         }
     }
 
     void Awake()
     {
-        forceController = FindObjectOfType<ForceController>();
         remainingRocksNumber = GameObject.Find("RemainingRocksNumber");
-        CurrentGameState = GameState.Aiming;
-        RemainingRocks = _startingRocks;
-        rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
-        forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+        rockSpawnPoint = GameObject.Find("Pivot").transform;
+        forceController = FindObjectOfType<ForceController>();
         remainingBallons = GameObject.FindGameObjectsWithTag("Ballon").Length;
         scoreController = FindObjectOfType<ScoreController>();
+    }
+
+    void Start()
+    {
+        rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
+        forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
+        RemainingRocks = startingRocks;
     }
 
     public void ResetRock()
     {
         if (rockInstance != null && rockSpawnPoint != null)
         {
+            // Update the game state and remaining rocks
+            CurrentGameState = GameState.Aiming;
+            RemainingRocks = remainingRocks - 1;
+
             // Destroy the rock instance and create a new one
             Destroy(rockInstance);
             rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
@@ -69,15 +74,12 @@ public class GameController : MonoBehaviour
 
             // Reset the force multiplier
             forceController.ResetForceMultiplier();
-
-            // Update the game state and remaining rocks
-            CurrentGameState = GameState.Aiming;
-            RemainingRocks = _remainingRocks - 1;
         }
     }
 
     void ReloadScene()
     {
+        OnDestroy();
         // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
