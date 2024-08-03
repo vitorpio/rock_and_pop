@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
+    private readonly float maxAngleShot = 35;
+    private readonly int sensitivity = 100;
+
     private GameController gameController;
     private float lastMouseX;
-    private float maxAngleShot = 35;
 
-    private int Sensitivity = 100;
     public Transform DotsTransform;
     public Transform PivotTransform;
     public float Angle = 0;
@@ -27,12 +26,12 @@ public class AimController : MonoBehaviour
     {
         if (gameController.CurrentGameState == GameState.Aiming)
         {
-            setInvisible(false);
+            SetInvisible(false);
             MoveAim();
         }
         else if (gameController.CurrentGameState != GameState.Shooting)
         {
-            setInvisible(true);
+            SetInvisible(true);
         }
     }
 
@@ -49,7 +48,7 @@ public class AimController : MonoBehaviour
         if (mouseXDelta != 0)
         {
             // Rotate Dots around Pivot. Adjust the rotation speed if necessary.
-            DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, -mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
+            DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, -mouseXDelta * Time.deltaTime * sensitivity); // Multiplied by 10 for sensitivity adjustment
 
             // Convert localEulerAngles.z to a range of -180 to 180 for easier comparison
             Angle = DotsTransform.localEulerAngles.z > 180 ? DotsTransform.localEulerAngles.z - 360 : DotsTransform.localEulerAngles.z;
@@ -57,13 +56,13 @@ public class AimController : MonoBehaviour
             // Check if the rotation is outside the allowed range
             if (Angle > maxAngleShot || Angle < -maxAngleShot)
             {
-                DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * Sensitivity); // Multiplied by 10 for sensitivity adjustment
+                DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * sensitivity); // Multiplied by 10 for sensitivity adjustment
             }
 
         }
     }
 
-    private void setInvisible(bool isVisible)
+    void SetInvisible(bool isVisible)
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers)
