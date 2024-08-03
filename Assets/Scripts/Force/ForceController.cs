@@ -5,26 +5,26 @@ using UnityEngine.UI;
 
 public class ForceController : MonoBehaviour
 {
-    public int minForceMultiplier = 1;
-    public int maxForceMultiplier = 10;
-    public int forceMultiplier;
-    public int startForceMultiplier = 0;
-    private float forceUpdateDelay = 0.1f;
+    private readonly int minForceMultiplier = 1;
+    public readonly int maxForceMultiplier = 10;
+    private readonly int startForceMultiplier = 0;
+    private readonly float forceUpdateDelay = 0.1f;
+
+    private GameController gameController;
+    private AimController aimController;
+    private Coroutine updateForceMultiplierCoroutine;
+    private Image forceBar;
 
     public RockMovementController rockMovementController;
     public List<Sprite> ForceBarSprites;
-
-    private GameController gameController;
-    private Coroutine updateForceMultiplierCoroutine;
-    private AimController aimController;
-    private Image forceBar;
-
+    public int forceMultiplier;
     private bool isIncreasing = true;
 
     void Awake()
     {
         gameController = FindObjectOfType<GameController>();
         aimController = FindObjectOfType<AimController>();
+        rockMovementController = FindObjectOfType<RockMovementController>();
         forceBar = GetComponent<Image>();
         ResetForceMultiplier();
     }
