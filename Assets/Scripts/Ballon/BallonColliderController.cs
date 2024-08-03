@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallonColliderController : MonoBehaviour
 {
-    public int points;
-
     private GameController gameController;
+
+    public int Points;
 
     void Awake()
     {
@@ -19,7 +16,7 @@ public class BallonColliderController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            gameController.AddPoints(points);
+            gameController.AddPoints(Points);
         }
     }
 
