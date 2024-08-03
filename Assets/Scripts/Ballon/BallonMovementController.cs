@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +12,11 @@ public class BallonMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (waypoints.Count == 0)
+        {
+            return;
+        }
+
         Vector3 target = waypoints[currentWaypoint].position;
 
         if (Vector3.Distance(transform.position, target) < distanceThreshold)
