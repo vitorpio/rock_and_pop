@@ -3,20 +3,14 @@ using UnityEngine;
 
 public class BallonMovementController : MonoBehaviour
 {
+    private readonly float speed = 1.0f;
+    private readonly float distanceThreshold = 0.1f;
+    private int currentWaypoint = 0;
+
     public List<Transform> waypoints;
-    public float speed = 1.0f;
-    public int currentWaypoint = 0;
-
-    private float distanceThreshold = 0.1f;
-
 
     void FixedUpdate()
     {
-        if (waypoints.Count == 0)
-        {
-            return;
-        }
-
         Vector3 target = waypoints[currentWaypoint].position;
 
         if (Vector3.Distance(transform.position, target) < distanceThreshold)
