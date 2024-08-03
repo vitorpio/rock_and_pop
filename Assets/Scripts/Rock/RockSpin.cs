@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class RockSpin : MonoBehaviour
 {
+    private readonly float spinSpeed = 1;
+
     private GameController gameController;
     private AimController aimController;
-    private Rigidbody2D rigidbody;
-    private float spinSpeed = 1;
+    private new Rigidbody2D rigidbody;
 
     void Awake()
     {
