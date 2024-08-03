@@ -1,23 +1,21 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RockUpAndDown : MonoBehaviour
 {
+    private readonly float maxRockScale = 0.5f;
+    private readonly float minRockScale = 0.3f;
+    private readonly float rockResizeScale = 0.02f;
+    private readonly float rockDelayScale = 0.02f;
+    private readonly float dragForceHitWater = 0.25f;
+    private float rockScale = 0.5f;
+
     private GameController gameController;
     private ForceController forceController;
     private AimController aimController;
     private RockMovementController rockMovementController;
-    private Rigidbody2D rigidbody;
-
-    private float rockScale = 0.5f;
-    private float maxRockScale = 0.5f;
-    private float minRockScale = 0.3f;
-    private float rockResizeScale = 0.02f;
-    private float rockDelayScale = 0.02f;
-    private float dragForceHitWater = 0.25f;
+    private new Rigidbody2D rigidbody;
     private bool isIncreasing = false;
-
     private Coroutine updateRockScaleCoroutine;
 
     public GameObject WavePrefab;
@@ -61,9 +59,10 @@ public class RockUpAndDown : MonoBehaviour
                 }
                 else
                 {
+                    // When the rock touches the water, it will create a wave and apply a force to the rock in the opposite direction.
                     isIncreasing = !isIncreasing;
                     Instantiate(WavePrefab, transform.position, Quaternion.identity);
-                    rockMovementController.ApplyForce(aimController.Angle, forceController.forceMultiplier * dragForceHitWater * -1);
+                    rockMovementController.ApplyForce(aimController.Angle, rigidbody.velocity.magnitude * dragForceHitWater * -1);
                 }
                 transform.localScale = new Vector3(rockScale, rockScale, rockScale);
                 yield return new WaitForSeconds(rockDelayScale * (forceController.maxForceMultiplier / rigidbody.velocity.magnitude));
