@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class BallonMovementController : MonoBehaviour
 {
-    private readonly float speed = 1.0f;
     private readonly float distanceThreshold = 0.1f;
     private int currentWaypoint = 0;
 
+    public float Speed = 1.0f;
     public List<Transform> waypoints;
 
     void FixedUpdate()
@@ -27,7 +27,7 @@ public class BallonMovementController : MonoBehaviour
         else
         {
             Vector3 moveDirection = target - transform.position;
-            float distance = speed * Time.deltaTime;
+            float distance = Speed * Time.deltaTime;
             transform.position += moveDirection.normalized * distance;
         }
     }
