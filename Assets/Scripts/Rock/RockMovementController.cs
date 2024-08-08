@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class RockMovementController : MonoBehaviour
 {
-    private readonly float minVelocityNotToSink = 2.0f;
 
+    private GameController gameController;
     private new Rigidbody2D rigidbody;
 
     void Awake()
     {
+        gameController = FindObjectOfType<GameController>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -26,12 +27,6 @@ public class RockMovementController : MonoBehaviour
 
         // Apply the force in the calculated direction
         rigidbody.AddForce(forceVector, ForceMode2D.Impulse);
-
-        // If the force is negative, the rock will sink if the velocity is less than minVelocityNotToSink
-        if (rigidbody.velocity.magnitude < minVelocityNotToSink && forceMultipliyer < 0)
-        {
-            gameObject.SetActive(false);
-        }
     }
 
 }
