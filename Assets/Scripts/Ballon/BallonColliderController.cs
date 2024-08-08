@@ -6,6 +6,8 @@ public class BallonColliderController : MonoBehaviour
     private PolygonCollider2D polygonCollider;
     private SpriteRenderer spriteRenderer;
 
+    public GameObject PopEffectPrefab;
+
     public int Points;
 
     void Awake()
@@ -40,6 +42,7 @@ public class BallonColliderController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(transform.parent.gameObject);
+            Instantiate(PopEffectPrefab, transform.position, Quaternion.identity);
             gameController.AddPoints(Points);
         }
     }
