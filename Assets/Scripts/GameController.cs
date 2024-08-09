@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -63,12 +64,21 @@ public class GameController : MonoBehaviour
     {
         if (rockInstance != null && rockSpawnPoint != null)
         {
-            // Update the game state and remaining rocks
-            CurrentGameState = GameState.Aiming;
+            Destroy(rockInstance);
+
+            // Update the remaining rocks
             RemainingRocks = remainingRocks - 1;
 
-            // Destroy the rock instance and create a new one
-            Destroy(rockInstance);
+            // If there are no more rocks, reload the scene
+            if (CurrentGameState == GameState.GameOver)
+            {
+                return;
+            }
+
+            // Set the game state to aiming if there are remaining rocks
+            CurrentGameState = GameState.Aiming;
+
+            // Create a new rock instance
             rockInstance = Instantiate(rockPrefab, rockSpawnPoint.position, Quaternion.identity);
             forceController.rockMovementController = rockInstance.GetComponent<RockMovementController>();
 
@@ -79,6 +89,12 @@ public class GameController : MonoBehaviour
 
     void ReloadScene()
     {
+        CurrentGameState = GameState.GameOver;
+        if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
+        {
+            Invoke(nameof(ReloadScene), 0.5f);
+            return;
+        }
         OnDestroy();
         // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

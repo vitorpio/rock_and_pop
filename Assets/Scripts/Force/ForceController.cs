@@ -95,6 +95,7 @@ public class ForceController : MonoBehaviour
     public void ResetForceMultiplier()
     {
         forceMultiplier = startForceMultiplier;
+        isIncreasing = true;
         forceBar.sprite = ForceBarSprites[forceMultiplier];
     }
 

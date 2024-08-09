@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6946a4ed1bb6c6acb5049254e4fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopEffectPrefab: {fileID: 1770570605244645617, guid: 992d631e906f4b7b2be65f2c82964685, type: 3}
+  PopEffectPrefab: {fileID: 8026603587953081770, guid: 0a74b6ad31e4009e08b8e14236cac3c1, type: 3}
   Points: 2
 --- !u!60 &7311909391022282363
 PolygonCollider2D:
