@@ -24,12 +24,12 @@ public class AimController : MonoBehaviour
 
     void Update()
     {
-        if (gameController.CurrentGameState == GameState.Aiming)
+        if (gameController.CurrentGameState == GameState.Aiming || gameController.CurrentGameState == GameState.Shooting)
         {
             SetInvisible(false);
             MoveAim();
         }
-        else if (gameController.CurrentGameState != GameState.Shooting)
+        else
         {
             SetInvisible(true);
         }
