@@ -20,7 +20,7 @@ public class RockUpAndDown : MonoBehaviour
     private Coroutine updateRockScaleCoroutine;
 
     public GameObject WavePrefab;
-    public GameObject SplagPrefab;
+    public GameObject SplashPrefab;
 
     void Awake()
     {
@@ -64,16 +64,15 @@ public class RockUpAndDown : MonoBehaviour
                     // When the rock touches the water, it will create a wave and apply a force to the rock in the opposite direction.
                     isIncreasing = !isIncreasing;
                     // If the force is negative, the rock will sink if the velocity is less than minVelocityNotToSink
-                    float forceMultipliyer = rigidbody.velocity.magnitude * dragForceHitWater * -1;
-                    if (rigidbody.velocity.magnitude < minVelocityNotToSink && forceMultipliyer < 0)
+                    if (rigidbody.velocity.magnitude < minVelocityNotToSink)
                     {
-                        Instantiate(SplagPrefab, transform.position, Quaternion.identity);
+                        Instantiate(SplashPrefab, transform.position, Quaternion.identity);
                         Destroy(gameObject);
                     }
                     else
                     {
                         Instantiate(WavePrefab, transform.position, Quaternion.identity);
-                        rockMovementController.ApplyForce(aimController.Angle, forceMultipliyer);
+                        rigidbody.AddForce(-1 * dragForceHitWater * rigidbody.velocity, ForceMode2D.Impulse);
                     }
                 }
                 transform.localScale = new Vector3(rockScale, rockScale, rockScale);

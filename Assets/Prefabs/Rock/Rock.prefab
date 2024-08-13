@@ -170,4 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WavePrefab: {fileID: 4435574818080412702, guid: 24aa077adec6ffc97978b3403304e77e, type: 3}
-  SplagPrefab: {fileID: 4414333204837477670, guid: 8b6849792cc60486a89cf71c96181d6a, type: 3}
+  SplashPrefab: {fileID: 4414333204837477670, guid: 8b6849792cc60486a89cf71c96181d6a, type: 3}

@@ -3,12 +3,10 @@ using UnityEngine;
 public class RockMovementController : MonoBehaviour
 {
 
-    private GameController gameController;
     private new Rigidbody2D rigidbody;
 
     void Awake()
     {
-        gameController = FindObjectOfType<GameController>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
