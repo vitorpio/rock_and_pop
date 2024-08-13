@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +16,12 @@ public class ForceController : MonoBehaviour
     private AimController aimController;
     private Coroutine updateForceMultiplierCoroutine;
     private Image forceBar;
+    private bool isIncreasing = true;
 
     public RockMovementController rockMovementController;
     public List<Sprite> ForceBarSprites;
     public int forceMultiplier;
-    private bool isIncreasing = true;
+    public EventReference ThrowSound;
 
     void Awake()
     {
@@ -61,6 +64,9 @@ public class ForceController : MonoBehaviour
                 updateForceMultiplierCoroutine = null;
             }
             rockMovementController.ApplyForce(aimController.Angle, forceMultiplier);
+            EventInstance throwSoundInstance = RuntimeManager.CreateInstance(ThrowSound);
+            throwSoundInstance.start();
+            throwSoundInstance.release();
         }
     }
 

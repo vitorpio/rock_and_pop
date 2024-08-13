@@ -9934,6 +9934,7 @@ GameObject:
   - component: {fileID: 7095246916820788140}
   - component: {fileID: 4538675784732510955}
   - component: {fileID: 1298107979314137915}
+  - component: {fileID: -1573435990584338069}
   m_Layer: 0
   m_Name: Pow
   m_TagString: Effect
@@ -14914,6 +14915,37 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-1573435990584338069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854015142032094284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 259660829
+      Data2: 1283409407
+      Data3: -1507337341
+      Data4: 1301238089
+    Path: event:/sfx_wood_impact
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7306905641253502086
 GameObject:
   m_ObjectHideFlags: 0

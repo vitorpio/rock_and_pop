@@ -9880,6 +9880,7 @@ GameObject:
   - component: {fileID: 9167155340078586262}
   - component: {fileID: 3573723309122284493}
   - component: {fileID: 8104391030576732676}
+  - component: {fileID: 3519390866399631600}
   m_Layer: 0
   m_Name: Pop
   m_TagString: Effect
@@ -14834,6 +14835,37 @@ MonoBehaviour:
   sortingFudgeOffset: -0.1
   font: {fileID: 11400000, guid: 6107d49d5744fb24eb855f7abb997756, type: 2}
   autoUpdateEditor: 1
+--- !u!114 &3519390866399631600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026603587953081770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -30630934
+      Data2: 1078577122
+      Data3: -441149311
+      Data4: -841857013
+    Path: event:/sfx_ballon_pop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8252381717972339578
 GameObject:
   m_ObjectHideFlags: 0

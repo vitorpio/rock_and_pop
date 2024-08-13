@@ -1,5 +1,104 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7267295807683242790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638591620464582385
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7105404548117864856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_throw_rock
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_throw_rock
+  Guid:
+    Data1: 1784171748
+    Data2: 1099254889
+    Data3: -1419935066
+    Data4: 2013197938
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 316
+--- !u!114 &-2746637259288133971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_bounce_rock
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_bounce_rock
+  Guid:
+    Data1: 1074488186
+    Data2: 1208884079
+    Data3: -492393037
+    Data4: 1474674456
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 520
+--- !u!114 &-1660583807044061986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_ballon_pop
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_ballon_pop
+  Guid:
+    Data1: -30630934
+    Data2: 1078577122
+    Data3: -441149311
+    Data4: -841857013
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 485
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +111,149 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 5767977350203895541}
+  - {fileID: -7267295807683242790}
+  EditorEvents:
+  - {fileID: 4318070914248353364}
+  - {fileID: -2746637259288133971}
+  - {fileID: 7026752695577427550}
+  - {fileID: 8781467062375794490}
+  - {fileID: 269092578562355699}
+  - {fileID: -7105404548117864856}
+  - {fileID: -1660583807044061986}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: -7267295807683242790}
+  StringsBanks:
+  - {fileID: 5767977350203895541}
+  cacheTime: 638591620464582385
   cacheVersion: 131618
+--- !u!114 &269092578562355699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music_theme_stage1
+  m_EditorClassIdentifier: 
+  Path: event:/music_theme_stage1
+  Guid:
+    Data1: 57044957
+    Data2: 1259726752
+    Data3: -1282067790
+    Data4: 1275430774
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 103297
+--- !u!114 &4318070914248353364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_wood_impact
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_wood_impact
+  Guid:
+    Data1: 259660829
+    Data2: 1283409407
+    Data3: -1507337341
+    Data4: 1301238089
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &5767977350203895541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638591620464582385
+  FileSizes:
+  - Name: 
+    Value: 1058
+  Exists: 1
+--- !u!114 &7026752695577427550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_lake_ambience
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_lake_ambience
+  Guid:
+    Data1: -1338037365
+    Data2: 1193709222
+    Data3: -134602095
+    Data4: -1361470654
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 76252
+--- !u!114 &8781467062375794490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_splash_rock
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_splash_rock
+  Guid:
+    Data1: 235311066
+    Data2: 1134555848
+    Data3: -300635229
+    Data4: 611166707
+  Banks:
+  - {fileID: -7267295807683242790}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000

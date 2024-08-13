@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5269410440416852343}
   - component: {fileID: 1339776154021947005}
+  - component: {fileID: -1227226445506389511}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Effect
@@ -45,6 +46,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424ecf9712ab88eb98489d6a4057095f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1227226445506389511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435574818080412702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1074488186
+      Data2: 1208884079
+      Data3: -492393037
+      Data4: 1474674456
+    Path: event:/sfx_bounce_rock
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1263160134429266652
 PrefabInstance:
   m_ObjectHideFlags: 0

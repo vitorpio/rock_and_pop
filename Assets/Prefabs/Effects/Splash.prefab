@@ -14895,6 +14895,7 @@ GameObject:
   - component: {fileID: 3364171763944361227}
   - component: {fileID: 9160842326938372404}
   - component: {fileID: 3889897425986078584}
+  - component: {fileID: 6758615418056398527}
   m_Layer: 0
   m_Name: Splash
   m_TagString: Effect
@@ -19879,6 +19880,37 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6758615418056398527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414333204837477670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 235311066
+      Data2: 1134555848
+      Data3: -300635229
+      Data4: 611166707
+    Path: event:/sfx_splash_rock
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6295733793451680889
 GameObject:
   m_ObjectHideFlags: 0
