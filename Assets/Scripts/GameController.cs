@@ -12,7 +12,7 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    private readonly int startingRocks = 3;
+    private readonly int startingRocks = 5;
 
     private GameObject remainingRocksNumber;
     private Transform rockSpawnPoint;
