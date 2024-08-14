@@ -103,7 +103,6 @@ public class GameController : MonoBehaviour
 
     void LoadNextScene()
     {
-        CurrentGameState = GameState.GameOver;
         if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
         {
             Invoke(nameof(LoadNextScene), 0.5f);
