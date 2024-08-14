@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LogMovement : MonoBehaviour
@@ -13,6 +10,8 @@ public class LogMovement : MonoBehaviour
     void Awake()
     {
         cameraController = FindObjectOfType<CameraController>();
+
+        // Position the log outside the screen based on its speed value
         if (Speed > 0)
         {
             cameraController.PositionObjectOutsideLeft(transform, Offset);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlowController : MonoBehaviour
@@ -13,6 +11,7 @@ public class FlowController : MonoBehaviour
         {
             RockUpAndDown rockUpAndDown = other.GetComponent<RockUpAndDown>();
 
+            // Only apply force if the rock is touching water
             if (rockUpAndDown.IsTouchingWater)
             {
                 Rigidbody2D rockRigidbody = other.GetComponent<Rigidbody2D>();
