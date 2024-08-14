@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     public GameObject rockPrefab;
     public int points = 0;
     public int remainingBallons;
+    public string nextSceneName;
 
     public int RemainingRocks
     {
@@ -100,6 +101,17 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    void LoadNextScene()
+    {
+        CurrentGameState = GameState.GameOver;
+        if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
+        {
+            Invoke(nameof(LoadNextScene), 0.5f);
+            return;
+        }
+        SceneManager.LoadScene(nextSceneName);
+    }
+
     public void AddPoints(int points)
     {
         this.points += points;
@@ -107,7 +119,14 @@ public class GameController : MonoBehaviour
         remainingBallons--;
         if (remainingBallons == 0)
         {
-            ReloadScene();
+            if (nextSceneName != null)
+            {
+                LoadNextScene();
+            }
+            else
+            {
+                ReloadScene();
+            }
         }
     }
 
