@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIFront
       objectReference: {fileID: 0}
+    - target: {fileID: 8229478334804206164, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.07495
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
