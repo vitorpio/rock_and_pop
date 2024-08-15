@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
-    private readonly float maxAngleShot = 35;
+    private readonly float maxAngleShot = 90;
     private readonly int sensitivity = 100;
 
     private GameController gameController;
