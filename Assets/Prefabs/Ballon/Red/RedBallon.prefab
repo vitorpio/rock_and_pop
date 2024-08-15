@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2764228269719886064}
   - component: {fileID: 2127006022137165812}
   - component: {fileID: 5191643301811062560}
+  - component: {fileID: 4263070328651901625}
   m_Layer: 0
   m_Name: RedBallon
   m_TagString: Ballon
@@ -83,6 +84,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4263070328651901625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691530703149545425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1 &1356982582555510499
 GameObject:
   m_ObjectHideFlags: 0
