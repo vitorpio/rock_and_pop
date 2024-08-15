@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class GameObjectPositioner : MonoBehaviour
 {
-    public Camera mainCamera; // Assign the main camera in the Inspector
+    private Camera mainCamera; // Assign the main camera in the Inspector
     public Vector2 viewportPosition; // Set the viewport position (0 to 1)
+
+    void Awake()
+    {
+        mainCamera = Camera.main;
+    }
 
     void Start()
     {
