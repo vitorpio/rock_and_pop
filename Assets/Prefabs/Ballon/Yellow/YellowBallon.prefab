@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 248088574397588421}
   - component: {fileID: 3932765921369096060}
   - component: {fileID: 5122735927887154435}
+  - component: {fileID: -331741155158229075}
   m_Layer: 0
   m_Name: YellowBallon
   m_TagString: Ballon
@@ -167,6 +168,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-331741155158229075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103193289455997411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1 &8254225521466178515
 GameObject:
   m_ObjectHideFlags: 0
