@@ -233,6 +233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIFront
       objectReference: {fileID: 0}
+    - target: {fileID: 5381952135962896104, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8229478334804206164, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -39.07495
@@ -245,6 +249,11 @@ PrefabInstance:
 --- !u!224 &4414860993894234976 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4047306294217921437, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
+  m_PrefabInstance: {fileID: 391345941002905853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5755283650404797973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5381952135962896104, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
   m_PrefabInstance: {fileID: 391345941002905853}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3794749837620541009
@@ -435,11 +444,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6804920084078616726, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804920084078616726, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804920084078616726, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5545062268158745159, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6314175973090882017, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 63212005661012314}
   m_SourcePrefab: {fileID: 100100000, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
 --- !u!4 &4525756862454672325 stripped
 Transform:
@@ -451,6 +475,25 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6804920084078616726, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
   m_PrefabInstance: {fileID: 4436415892499371290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7651938096433456379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6314175973090882017, guid: 0b71d405342bffecba05dfff854390d2, type: 3}
+  m_PrefabInstance: {fileID: 4436415892499371290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &63212005661012314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651938096433456379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9c9cce2f4b153dd946eea83547dc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIBack: {fileID: 6895222693592290431}
+  UIFront: {fileID: 5755283650404797973}
 --- !u!1001 &7294525707807227201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -547,6 +590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIBack
       objectReference: {fileID: 0}
+    - target: {fileID: 4218638074861201726, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8061074859909708254, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
@@ -579,6 +626,11 @@ PrefabInstance:
       addedObject: {fileID: 4339128964036105861}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
+--- !u!1 &6895222693592290431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4218638074861201726, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
+  m_PrefabInstance: {fileID: 7294525707807227201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8941777025661880327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1814052005125993798, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}

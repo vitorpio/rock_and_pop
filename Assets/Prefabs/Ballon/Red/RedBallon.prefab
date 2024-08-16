@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportPosition: {x: 0, y: 0}
+  viewportPosition: {x: 0.5, y: 0.8}
 --- !u!1 &1356982582555510499
 GameObject:
   m_ObjectHideFlags: 0
