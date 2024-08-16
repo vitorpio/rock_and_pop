@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2347459525316619677}
   - component: {fileID: 2767298259239829109}
   - component: {fileID: 6914850197238338488}
+  - component: {fileID: -7319405758084359606}
   m_Layer: 0
   m_Name: RightFlow
   m_TagString: Untagged
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowForce: 0.2
   Direction: {x: 1, y: 0}
+--- !u!114 &-7319405758084359606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903265140961665673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &2149812061057627936
 PrefabInstance:
   m_ObjectHideFlags: 0

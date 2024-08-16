@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1118617305487385921, guid: 96667edaffa69fac4802303c9c2fb19e, type: 3}
       propertyPath: m_Name
-      value: Log3WithMovement Variant
+      value: Log3WithMovement
       objectReference: {fileID: 0}
     - target: {fileID: 3355161345940543442, guid: 96667edaffa69fac4802303c9c2fb19e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3639747302250639727, guid: 96667edaffa69fac4802303c9c2fb19e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

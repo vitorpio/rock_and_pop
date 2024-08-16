@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 691530703149545425, guid: 7dda6b3cb45c7850fbe825c20cf2ee2a, type: 3}
       propertyPath: m_Name
-      value: RedBallon Variant
+      value: RedBallonWithMovement
       objectReference: {fileID: 0}
     - target: {fileID: 2764228269719886064, guid: 7dda6b3cb45c7850fbe825c20cf2ee2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4263070328651901625, guid: 7dda6b3cb45c7850fbe825c20cf2ee2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -77,6 +78,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4c3e5bf3ff1d1d39c7192df6701c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 1
   waypoints: []
-  speed: 1
-  currentWaypoint: 0

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6091195625479456473}
+  - component: {fileID: -3659490065712785595}
   m_Layer: 0
   m_Name: YellowBallonWithMovement + Waypoints
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 2675434692735061877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3659490065712785595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139460946905590453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &565278297060957800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,6 +107,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2640284405703528775, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 8785022500275435022}
+    - target: {fileID: 2640284405703528775, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 5977219524732631585}
     - target: {fileID: 5560612934126222103, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
       propertyPath: m_Name
       value: YellowBallonWithMovement

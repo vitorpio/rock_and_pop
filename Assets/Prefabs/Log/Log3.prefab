@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6818583293840693098}
   - component: {fileID: 4946989087640610120}
   - component: {fileID: 4082912295905673902}
+  - component: {fileID: -3639747302250639727}
   m_Layer: 0
   m_Name: Log3
   m_TagString: Log
@@ -303,3 +304,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowEffectPrefab: {fileID: 6854015142032094284, guid: b2c2010f9ff54933194d2d165ad17fcb, type: 3}
+--- !u!114 &-3639747302250639727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118617305487385921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}

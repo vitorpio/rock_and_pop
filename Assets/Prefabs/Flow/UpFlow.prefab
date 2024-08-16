@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5496668738512957811}
   - component: {fileID: 9143774138410143352}
   - component: {fileID: 2173879613724366306}
+  - component: {fileID: 2837924198442178832}
   m_Layer: 0
   m_Name: UpFlow
   m_TagString: Untagged
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowForce: 0.2
   Direction: {x: 0, y: 1}
+--- !u!114 &2837924198442178832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915566624009978367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &2475065502527992282
 PrefabInstance:
   m_ObjectHideFlags: 0

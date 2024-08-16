@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278805331568761360, guid: 1e2886cf8bc19e3119ec38f4128ff69f, type: 3}
       propertyPath: m_Name
-      value: Log6WithMovement Variant
+      value: Log6WithMovement
       objectReference: {fileID: 0}
     - target: {fileID: 5721590588028391612, guid: 1e2886cf8bc19e3119ec38f4128ff69f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -242665765586940410, guid: 1e2886cf8bc19e3119ec38f4128ff69f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8778275403569792028}
   - component: {fileID: 8234246202897540019}
   - component: {fileID: 69833986363690692}
+  - component: {fileID: 5741257386733903013}
   m_Layer: 0
   m_Name: LeftFlow
   m_TagString: Untagged
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowForce: 0.2
   Direction: {x: -1, y: 0}
+--- !u!114 &5741257386733903013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460736891077114988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &761697090659569359
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8145419072066677099}
   - component: {fileID: 3497820208197551158}
   - component: {fileID: 6259515631608175948}
+  - component: {fileID: -4126140352825374860}
   m_Layer: 0
   m_Name: LeftSwirl
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swirlForce: 3
   Direction: {x: -1, y: 0}
+--- !u!114 &-4126140352825374860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403834313134387652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &1700963970518870855
 PrefabInstance:
   m_ObjectHideFlags: 0

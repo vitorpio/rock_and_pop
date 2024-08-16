@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6056390738651854126}
+  - component: {fileID: 361276385969713139}
   m_Layer: 0
   m_Name: RedBallonWithMovement + Waypoints
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 2636517862432957172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361276385969713139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368179740808278496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportPosition: {x: 0, y: 0}
 --- !u!1001 &2754474516802975583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,13 +95,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6801761699979341008, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.995
+      objectReference: {fileID: 0}
     - target: {fileID: 8379989401979167757, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
       propertyPath: m_Name
       value: Wayponits
       objectReference: {fileID: 0}
     - target: {fileID: 8465997834098614527, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -151,15 +169,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7756846254076686835, guid: d9d25f099f0e6fbd89b149c1f5b9b041, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7756846254076686835, guid: d9d25f099f0e6fbd89b149c1f5b9b041, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7756846254076686835, guid: d9d25f099f0e6fbd89b149c1f5b9b041, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7756846254076686835, guid: d9d25f099f0e6fbd89b149c1f5b9b041, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -173,7 +191,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8561395143112754106, guid: d9d25f099f0e6fbd89b149c1f5b9b041, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
