@@ -20,8 +20,27 @@ public class GameController : MonoBehaviour
     private GameObject rockInstance;
     private ScoreController scoreController;
     private int remainingRocks;
+    private GameState currentGameState = GameState.Aiming;
 
-    public GameState CurrentGameState = GameState.Aiming;
+    private int ballonsPoppedInTurn;
+
+    public GameState CurrentGameState
+    {
+        get { return currentGameState; }
+        set
+        {
+            currentGameState = value;
+            if (currentGameState == GameState.Aiming)
+            {
+                if (ballonsPoppedInTurn > 0)
+                {
+                    this.points *= ballonsPoppedInTurn;
+                    scoreController.UpdateScore(this.points);
+                }
+                ballonsPoppedInTurn = 0;
+            }
+        }
+    }
     public GameObject rockPrefab;
     public int points = 0;
     public int remainingBallons;
@@ -116,6 +135,7 @@ public class GameController : MonoBehaviour
         this.points += points;
         scoreController.UpdateScore(this.points);
         remainingBallons--;
+        ballonsPoppedInTurn++;
         if (remainingBallons == 0)
         {
             if (nextSceneName != null)
