@@ -3,7 +3,7 @@ using UnityEngine;
 public class AimController : MonoBehaviour
 {
     private readonly float maxAngleShot = 90;
-    private readonly int sensitivity = 50;
+    private readonly int sensitivity = 20;
 
     private GameController gameController;
     private float lastMouseX;
