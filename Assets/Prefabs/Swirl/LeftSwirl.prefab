@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee116275009bce6359d07829b5780141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swirlForce: 3
+  swirlForce: 5
   Direction: {x: -1, y: 0}
 --- !u!114 &-4126140352825374860
 MonoBehaviour:
@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewportPosition: {x: 0, y: 0}
+  OffesetX: 0
+  OffesetY: 0
 --- !u!1001 &1700963970518870855
 PrefabInstance:
   m_ObjectHideFlags: 0

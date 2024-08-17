@@ -48,12 +48,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3956365439462714913, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
+      propertyPath: OffesetY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8817954406489195800, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
       propertyPath: m_Name
       value: Log1WithMovement
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3956365439462714913, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

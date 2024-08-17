@@ -79,6 +79,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.6
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []

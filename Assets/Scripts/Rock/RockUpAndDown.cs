@@ -7,7 +7,7 @@ public class RockUpAndDown : MonoBehaviour
     private readonly float maxRockScale = 0.5f;
     private readonly float minRockScale = 0.3f;
     private readonly float rockResizeScale = 0.02f;
-    private readonly float rockDelayScale = 0.008f;
+    private readonly float rockDelayScale = 0.005f;
     private readonly float dragForceHitWater = 0.25f;
     private float rockScale = 0.5f;
 

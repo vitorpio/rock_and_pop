@@ -176,6 +176,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4263070328651901625, guid: 7dda6b3cb45c7850fbe825c20cf2ee2a, type: 3}
+      propertyPath: OffesetX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263070328651901625, guid: 7dda6b3cb45c7850fbe825c20cf2ee2a, type: 3}
       propertyPath: viewportPosition.x
       value: 0.5
       objectReference: {fileID: 0}

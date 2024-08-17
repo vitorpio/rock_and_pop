@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewportPosition: {x: 0, y: 0}
+  OffesetX: 0
+  OffesetY: 0
 --- !u!1001 &565278297060957800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +108,10 @@ PrefabInstance:
     - target: {fileID: 1939013816857037105, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640284405703528775, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2640284405703528775, guid: e8f51540ee43839f897a220cb2c8918c, type: 3}
       propertyPath: waypoints.Array.data[0]

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewportPosition: {x: 0, y: 0}
+  OffesetX: 0
+  OffesetY: 0
 --- !u!1001 &2754474516802975583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,7 +99,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6801761699979341008, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8379989401979167757, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
       propertyPath: m_Name
@@ -105,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8465997834098614527, guid: 7f681d60d77be463f9c67035b145b5f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.995
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

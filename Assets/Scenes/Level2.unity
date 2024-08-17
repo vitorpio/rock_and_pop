@@ -206,11 +206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 248088574397588421, guid: 10a8cbacd4bf77ecfaa239e857d7a7ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.22893
+      value: -6.02
       objectReference: {fileID: 0}
     - target: {fileID: 248088574397588421, guid: 10a8cbacd4bf77ecfaa239e857d7a7ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1260083
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 248088574397588421, guid: 10a8cbacd4bf77ecfaa239e857d7a7ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -275,11 +275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056390738651854126, guid: 2af196b4db62b2f25bdf2d8821e3d5cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.11
+      value: -6.02
       objectReference: {fileID: 0}
     - target: {fileID: 6056390738651854126, guid: 2af196b4db62b2f25bdf2d8821e3d5cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.28
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 6056390738651854126, guid: 2af196b4db62b2f25bdf2d8821e3d5cf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -336,11 +336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873538539886995980, guid: 87b4091c0006348be9e5427c7d08660e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.31107
+      value: -6.02
       objectReference: {fileID: 0}
     - target: {fileID: 3873538539886995980, guid: 87b4091c0006348be9e5427c7d08660e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1260083
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 3873538539886995980, guid: 87b4091c0006348be9e5427c7d08660e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -388,6 +388,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1325497645}
-  - {fileID: 1409511555}
   - {fileID: 1546262566}
   - {fileID: 1354400700}
+  - {fileID: 1409511555}
