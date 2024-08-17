@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: BlackBlossom
   productName: rock_and_pop
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 1.0.2
+  bundleVersion: 0.0.1
   preloadedAssets:
   - {fileID: 7246160218032574522, guid: da7f29dab4e876f0180a2a06cbe36186, type: 2}
   - {fileID: 11400000, guid: 9088c0e4b8a0ddae49fbed4d718ccb9b, type: 2}

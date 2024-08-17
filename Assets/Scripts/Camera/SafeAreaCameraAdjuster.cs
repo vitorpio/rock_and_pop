@@ -11,12 +11,13 @@ public class SafeAreaCameraAdjuster : MonoBehaviour
     {
         mainCamera = GetComponent<Camera>();
         AdjustCameraViewport();
-        UIBack.SetActive(true);
-        UIFront.SetActive(true);
     }
 
     void AdjustCameraViewport()
     {
+        UIBack.SetActive(false);
+        UIFront.SetActive(false);
+
         Rect safeArea = Screen.safeArea;
 
         // Convert safe area from screen space to viewport space
@@ -25,6 +26,9 @@ public class SafeAreaCameraAdjuster : MonoBehaviour
 
         // Set the camera's viewport rect
         mainCamera.rect = new Rect(viewportMin.x, viewportMin.y, viewportMax.x - viewportMin.x, viewportMax.y - viewportMin.y);
+
+        UIBack.SetActive(true);
+        UIFront.SetActive(true);
     }
 
     void OnRectTransformDimensionsChange()
