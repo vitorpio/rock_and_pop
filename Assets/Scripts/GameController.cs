@@ -117,7 +117,6 @@ public class GameController : MonoBehaviour
             Invoke(nameof(ReloadScene), 0.5f);
             return;
         }
-        OnDestroy();
         // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
