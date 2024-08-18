@@ -7,8 +7,7 @@ public enum GameState
 {
     Aiming,
     Shooting,
-    WaitingForNextTurn,
-    GameOver
+    WaitingForNextTurn
 }
 
 public class GameController : MonoBehaviour
@@ -35,15 +34,13 @@ public class GameController : MonoBehaviour
         get { return RemainingRocks; }
         set
         {
+            remainingRocks = value;
+            remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = remainingRocks.ToString();
+
             // If the remaining rocks is 0, reload the scene GAME-OVER
             if (value == 0)
             {
                 ReloadScene();
-            }
-            else
-            {
-                remainingRocks = value;
-                remainingRocksNumber.GetComponent<UnityEngine.UI.Text>().text = remainingRocks.ToString();
             }
         }
     }
@@ -86,7 +83,7 @@ public class GameController : MonoBehaviour
             RemainingRocks = remainingRocks - 1;
 
             // If there are no more rocks, reload the scene
-            if (CurrentGameState == GameState.GameOver)
+            if (remainingBallons == 0 || remainingRocks == 0)
             {
                 return;
             }
@@ -111,7 +108,6 @@ public class GameController : MonoBehaviour
             return;
         }
 
-        CurrentGameState = GameState.GameOver;
         if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
         {
             Invoke(nameof(ReloadScene), 0.5f);
