@@ -24,10 +24,13 @@ public class AimController : MonoBehaviour
 
     void Update()
     {
-        if (gameController.CurrentGameState == GameState.Aiming || gameController.CurrentGameState == GameState.Shooting)
+        if (gameController.CurrentGameState == GameState.Shooting)
+        {
+            MoveAim();
+        }
+        else if (gameController.CurrentGameState == GameState.Aiming)
         {
             SetInvisible(false);
-            MoveAim();
         }
         else
         {
@@ -54,7 +57,7 @@ public class AimController : MonoBehaviour
             Angle = DotsTransform.localEulerAngles.z > 180 ? DotsTransform.localEulerAngles.z - 360 : DotsTransform.localEulerAngles.z;
 
             // Check if the rotation is outside the allowed range
-            if (Angle > maxAngleShot || Angle < -maxAngleShot)
+            if (Angle >= maxAngleShot || Angle <= -maxAngleShot)
             {
                 DotsTransform.RotateAround(PivotTransform.position, Vector3.forward, mouseXDelta * Time.deltaTime * sensitivity); // Multiplied by 10 for sensitivity adjustment
             }
