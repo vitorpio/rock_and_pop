@@ -1,5 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
+using GameConfig;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

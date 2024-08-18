@@ -1,4 +1,5 @@
 using System.Linq;
+using GameConfig;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,6 +27,8 @@ public class GameController : MonoBehaviour
     public int points = 0;
     public int remainingBallons;
     public string nextSceneName;
+    public GameObject LeftForceController;
+    public GameObject RightForceController;
 
     public int RemainingRocks
     {
@@ -47,6 +50,17 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        if (GameParameters.LeftOrRight == -1)
+        {
+            RightForceController.SetActive(true);
+            Destroy(LeftForceController);
+        }
+        else
+        {
+            LeftForceController.SetActive(true);
+            Destroy(RightForceController);
+        }
+
         remainingRocksNumber = GameObject.Find("RemainingRocksNumber");
         rockSpawnPoint = GameObject.Find("Pivot").transform;
         forceController = FindObjectOfType<ForceController>();
