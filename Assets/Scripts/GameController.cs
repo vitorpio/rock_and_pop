@@ -90,6 +90,12 @@ public class GameController : MonoBehaviour
 
     void ReloadScene()
     {
+        // Check if level is completed before reloading the scene
+        if (remainingBallons == 0)
+        {
+            return;
+        }
+
         CurrentGameState = GameState.GameOver;
         if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
         {
