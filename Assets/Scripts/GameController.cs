@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        // Check if the player chose left or right on previous config screen
         if (GameParameters.LeftOrRight == -1)
         {
             RightForceController.SetActive(true);
