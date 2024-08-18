@@ -345,7 +345,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &722790180576457776
 MonoBehaviour:
@@ -475,10 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92826d10989916fd09a9e74e5c3983ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minForceMultiplier: 1
-  maxForceMultiplier: 10
-  forceMultiplier: 0
-  startForceMultiplier: 0
   rockMovementController: {fileID: 0}
   ForceBarSprites:
   - {fileID: 21300000, guid: 271ecb1215b5317bd8743a790c6d26dc, type: 3}
@@ -492,3 +488,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bdc677ce4cb9a506a9f165e541d4fc2f, type: 3}
   - {fileID: 21300000, guid: 226f985acedd9b11e88bffff8cde0d77, type: 3}
   - {fileID: 21300000, guid: 6fd320d9705cb82409c30b043272ef0b, type: 3}
+  forceMultiplier: 0
+  ThrowSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

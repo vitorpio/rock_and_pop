@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb41db1b349af732ab3b376487f997ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewportPosition: {x: 0, y: 0}
+  viewportPosition: {x: 0.5, y: 0.7}
+  OffesetX: 0
+  OffesetY: 0
 --- !u!1 &1356982582555510499
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +171,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f479fdea03e927ef4bb866a450f5d922, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
