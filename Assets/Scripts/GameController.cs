@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
             // If the remaining rocks is 0, reload the scene GAME-OVER
             if (value == 0)
             {
-                ReloadScene();
+                LoadNextScene();
             }
         }
     }
@@ -100,22 +100,22 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void ReloadScene()
-    {
-        // Check if level is completed before reloading the scene
-        if (remainingBallons == 0)
-        {
-            return;
-        }
+    // void ReloadScene()
+    // {
+    //     // Check if level is completed before reloading the scene
+    //     if (remainingBallons == 0)
+    //     {
+    //         return;
+    //     }
 
-        if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
-        {
-            Invoke(nameof(ReloadScene), 0.5f);
-            return;
-        }
-        // Reload the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    //     if (GameObject.FindGameObjectsWithTag("Effect").Count() > 0)
+    //     {
+    //         Invoke(nameof(ReloadScene), 0.5f);
+    //         return;
+    //     }
+    //     // Reload the current scene
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    // }
 
     void LoadNextScene()
     {
@@ -131,17 +131,11 @@ public class GameController : MonoBehaviour
     {
         this.points += points;
         scoreController.UpdateScore(this.points);
+        GameParameters.TotalPoints += this.points;
         remainingBallons--;
-        if (remainingBallons == 0)
+        if (remainingBallons == 0 && nextSceneName != null)
         {
-            if (nextSceneName != null)
-            {
-                LoadNextScene();
-            }
-            else
-            {
-                ReloadScene();
-            }
+            LoadNextScene();
         }
     }
 

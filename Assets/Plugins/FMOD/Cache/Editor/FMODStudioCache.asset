@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!114 &-9091928763105364547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +28,8 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 529
+=======
+>>>>>>> Stashed changes
 --- !u!114 &-9078925650000050401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +72,11 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 638597810472059560
+=======
+  lastModified: 638597789614347351
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &-6916967497959427500
@@ -285,13 +292,20 @@ MonoBehaviour:
   - {fileID: -6916967497959427500}
   - {fileID: 957399666019066752}
   - {fileID: -3142589903855362773}
+<<<<<<< Updated upstream
   - {fileID: -9091928763105364547}
+=======
+>>>>>>> Stashed changes
   EditorParameters: []
   MasterBanks:
   - {fileID: -7267295807683242790}
   StringsBanks:
   - {fileID: 5767977350203895541}
+<<<<<<< Updated upstream
   cacheTime: 638597810472059560
+=======
+  cacheTime: 638597789614357350
+>>>>>>> Stashed changes
   cacheVersion: 131618
 --- !u!114 &957399666019066752
 MonoBehaviour:
@@ -428,6 +442,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+<<<<<<< Updated upstream
 --- !u!114 &5429766877894088147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +470,8 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 529
+=======
+>>>>>>> Stashed changes
 --- !u!114 &5523977657127438369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +514,11 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 638597810472059560
+=======
+  lastModified: 638597789614357350
+>>>>>>> Stashed changes
   FileSizes:
   - Name: 
     Value: 1164

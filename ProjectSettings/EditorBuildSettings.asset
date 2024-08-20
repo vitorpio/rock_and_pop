@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/BlackBlossom.unity
+    guid: 5f2047afeece3bc2796202d338ae2e69
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 0c74f74ea6905d74f92160f210d15390
+  - enabled: 1
+    path: Assets/Scenes/LeftOrRight.unity
+    guid: 3b764c8e740c84bb4ba31699dde7044b
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: f18d1af44fe619bf8928eda2e0bff589
   - enabled: 1
@@ -23,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: dd9a950fa20d542d4a29655e764900a9
+  - enabled: 1
+    path: Assets/Scenes/FinalScore.unity
+    guid: 2600b12fa90e0eb1caf398e7fde126b8
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: b3e8554d7940236c5ac9e0914baff44d, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: da7f29dab4e876f0180a2a06cbe36186, type: 2}
