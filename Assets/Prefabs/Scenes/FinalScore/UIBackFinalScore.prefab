@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af1a99895d07531ba44aa21d7687f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 6902528318429491633}
 --- !u!1 &7568024234386502280
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,4 +270,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 23
+  m_Text: 
