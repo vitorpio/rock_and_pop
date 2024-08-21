@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FinalScore : MonoBehaviour
 {
-    private readonly string NextSceneName = "BlackBlossom";
+    private readonly string NextSceneName = "Title";
 
     public Text ScoreText;
 
