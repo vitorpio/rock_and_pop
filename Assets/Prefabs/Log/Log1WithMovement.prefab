@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 432757814717411489, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432757814717411489, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432757814717411489, guid: f52b49584ad72fb22899f11c1aa9f7d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -82,4 +82,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
-  Offset: 2

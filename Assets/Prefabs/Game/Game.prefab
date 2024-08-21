@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d093998b803e07f418bbc7f1739efacc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a760a4594e143a4d9e6c6be80a75412, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5381952135962896104, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7939208451652661777, guid: e33a37335e2cf95e2a40b56164c60663, type: 3}
       propertyPath: m_AnchorMax.x
@@ -521,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474974188967894779, guid: 6f7b7c78a98459bda821558388e97599, type: 3}
       propertyPath: nextSceneName
-      value: Level2
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 4474974188967894779, guid: 6f7b7c78a98459bda821558388e97599, type: 3}
       propertyPath: rockSpawnPoint
@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1968122808465770233, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c8719aaaae462c344854da7d91116d52, type: 3}
     - target: {fileID: 2275596284517024726, guid: 3895ebe6fb5703c339cbb51e658743b5, type: 3}
       propertyPath: m_Camera
       value: 
