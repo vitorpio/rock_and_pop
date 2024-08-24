@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LeftOrRight.unity
     guid: 3b764c8e740c84bb4ba31699dde7044b
   - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: 3ede0d66d64e148098fdc77d1bafd600
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: f18d1af44fe619bf8928eda2e0bff589
   - enabled: 1

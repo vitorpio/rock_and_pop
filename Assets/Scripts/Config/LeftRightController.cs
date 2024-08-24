@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LeftRightController : MonoBehaviour
 {
-    private readonly string NextSceneName = "Level1";
+    private readonly string NextSceneName = "Transition";
 
     public EventReference ClickSound;
     public GameObject UIBack;
@@ -17,8 +17,6 @@ public class LeftRightController : MonoBehaviour
 
         GameParameters.LeftOrRight = -1;
 
-        UIBack.SetActive(false);
-        UIFront.SetActive(false);
         SceneManager.LoadScene(NextSceneName);
     }
 
@@ -28,8 +26,6 @@ public class LeftRightController : MonoBehaviour
 
         GameParameters.LeftOrRight = 1;
 
-        UIBack.SetActive(false);
-        UIFront.SetActive(false);
         SceneManager.LoadScene(NextSceneName);
     }
 }
